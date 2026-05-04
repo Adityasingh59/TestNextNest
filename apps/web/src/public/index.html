@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NextNest</title>
     <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" type="module"></script>
   </head>
   <body>
     <header class="topbar">
@@ -45,21 +46,39 @@
           <p class="eyebrow">Discovery</p>
           <h2>Searchable, time-bound lease supply</h2>
         </div>
-        <div class="grid">
+        <form class="filters" id="listing-filters">
+          <label>
+            City
+            <select name="city">
+              <option value="">All cities</option>
+              <option value="San Francisco">San Francisco</option>
+              <option value="Oakland">Oakland</option>
+            </select>
+          </label>
+          <label>
+            Max rent
+            <select name="maxRent">
+              <option value="">Any</option>
+              <option value="250000">$2,500</option>
+              <option value="300000">$3,000</option>
+              <option value="350000">$3,500</option>
+            </select>
+          </label>
+          <label>
+            Sort
+            <select name="sort">
+              <option value="recent">Recent</option>
+              <option value="price_asc">Price low</option>
+              <option value="price_desc">Price high</option>
+            </select>
+          </label>
+          <button class="button primary" type="submit">Search</button>
+        </form>
+        <div class="grid" id="listing-results" aria-live="polite">
           <article class="listing">
-            <span>$2,850/mo</span>
-            <h3>Sunny 1 bed near transit</h3>
-            <p>Available June 1. Lease ends February 28. Seller verified, lease uploaded.</p>
-          </article>
-          <article class="listing">
-            <span>$3,200/mo</span>
-            <h3>Furnished downtown loft</h3>
-            <p>Available immediately. Six months remaining. Landlord document checklist ready.</p>
-          </article>
-          <article class="listing">
-            <span>$2,450/mo</span>
-            <h3>Quiet studio with parking</h3>
-            <p>Available July 15. Nine months remaining. Exact address gated until offer acceptance.</p>
+            <span>Loading</span>
+            <h3>Fetching listings</h3>
+            <p>NextNest is loading available lease takeovers.</p>
           </article>
         </div>
       </section>
@@ -85,4 +104,3 @@
     </main>
   </body>
 </html>
-

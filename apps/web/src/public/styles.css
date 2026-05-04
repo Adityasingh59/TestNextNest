@@ -180,6 +180,34 @@ h2 {
   margin-bottom: 24px;
 }
 
+.filters {
+  align-items: end;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 22px;
+}
+
+.filters label {
+  color: var(--muted);
+  display: grid;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  gap: 7px;
+}
+
+.filters select {
+  appearance: none;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  font: inherit;
+  min-height: 46px;
+  padding: 0 12px;
+}
+
 .grid {
   display: grid;
   gap: 18px;
@@ -202,6 +230,29 @@ h2 {
   color: var(--muted);
   font-family: ui-sans-serif, system-ui, sans-serif;
   line-height: 1.6;
+}
+
+.listing dl {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 0;
+}
+
+.listing dl div {
+  display: flex;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 13px;
+  justify-content: space-between;
+}
+
+.listing dt {
+  color: var(--muted);
+}
+
+.listing dd {
+  font-weight: 800;
+  margin: 0;
+  text-align: right;
 }
 
 .split {
@@ -247,6 +298,7 @@ h2 {
 
   .hero,
   .split,
+  .filters,
   .grid {
     grid-template-columns: 1fr;
   }
@@ -255,4 +307,3 @@ h2 {
     font-size: 48px;
   }
 }
-
