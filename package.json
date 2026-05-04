@@ -10,11 +10,11 @@
   "scripts": {
     "dev:api": "node apps/api/src/server.mjs",
     "dev:web": "node apps/web/src/server.mjs",
-    "lint": "node scripts/lint.mjs",
+    "lint": "node scripts/lint.mjs && npm run validate:db",
+    "validate:db": "node packages/db/scripts/validate-migrations.mjs",
     "test": "node --test"
   },
   "engines": {
     "node": ">=20"
   }
 }
-

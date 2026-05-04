@@ -8,6 +8,7 @@ This repository is being built incrementally from `BUILD_PLAN.md`.
 
 - `apps/api`: HTTP API foundation
 - `apps/web`: responsive web foundation
+- `packages/db`: initial PostgreSQL schema and migration checks
 - `packages/contracts`: shared product contracts and domain rules
 - `docs`: engineering notes and module specs
 
@@ -16,7 +17,7 @@ This repository is being built incrementally from `BUILD_PLAN.md`.
 ```bash
 npm test
 npm run lint
+npm run validate:db
 npm run dev:api
 npm run dev:web
 ```
-
