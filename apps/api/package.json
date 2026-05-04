@@ -1,0 +1,13 @@
+{
+  "name": "@nextnest/api",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "node src/server.mjs"
+  },
+  "dependencies": {
+    "@nextnest/contracts": "0.1.0"
+  }
+}
+
