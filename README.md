@@ -21,3 +21,11 @@ npm run validate:db
 npm run dev:api
 npm run dev:web
 ```
+
+## API Smoke Routes
+
+- `GET /health`
+- `GET /listings?city=San%20Francisco&maxRent=300000`
+- `GET /listings/listing_1`
+- `GET /listings/listing_1?viewerUserId=buyer_1`
+- `GET /workflow/deal-states`
